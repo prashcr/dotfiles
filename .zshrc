@@ -1,3 +1,4 @@
+# Author: Prashanth Chandra <coolshanth94@gmail.com>
 #
 # Executes commands at the start of an interactive session.
 #

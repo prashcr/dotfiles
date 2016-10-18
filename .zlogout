@@ -1,3 +1,4 @@
+# Author: Prashanth Chandra <coolshanth94@gmail.com>
 #
 # Executes commands at logout.
 #
