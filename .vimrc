@@ -79,9 +79,9 @@ set fileformats=unix,dos,mac
 set expandtab
 " Be smart when using tabs
 set smarttab
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
 " Linebreak on 120 characters
 set linebreak
 set textwidth=120
@@ -90,13 +90,9 @@ set smartindent
 set wrap
 
 " Filetype specific
-autocmd Filetype html set tabstop=2|set shiftwidth=2|set expandtab
-autocmd Filetype css set tabstop=2|set shiftwidth=2|set expandtab
-autocmd Filetype javascript set tabstop=2|set shiftwidth=2|set expandtab
-autocmd Filetype sh,zsh set tabstop=2|set shiftwidth=2|set expandtab
 autocmd Filetype markdown set textwidth=0
 augroup pandoc_syntax
-    au! BufNewFile,BufFilePRe,BufRead *.pdc set filetype=markdown.pandoc
+  au! BufNewFile,BufFilePRe,BufRead *.pdc set filetype=markdown.pandoc
 augroup END
 
 
@@ -113,13 +109,13 @@ set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " Asynchronous Lint Engine
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\}
+      \   'javascript': ['eslint'],
+      \}
 let g:ale_sign_column_always = 1
 
 " Help ftplugin/ruby.vim because it gets confused by RVM
 if !empty($MY_RUBY_HOME)
- let g:ruby_path = join(split(glob($MY_RUBY_HOME.'/lib/ruby/*.*')."\n".glob($MY_RUBY_HOME.'/lib/ruby/site_ruby/*'),"\n"),',')
+  let g:ruby_path = join(split(glob($MY_RUBY_HOME.'/lib/ruby/*.*')."\n".glob($MY_RUBY_HOME.'/lib/ruby/site_ruby/*'),"\n"),',')
 endif
 
 " Turn off pandoc syntax conceal
@@ -142,7 +138,7 @@ let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 function! XTermPasteBegin()
-    set pastetoggle=<Esc>[201~
-    set paste
-    return ""
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
 endfunction
