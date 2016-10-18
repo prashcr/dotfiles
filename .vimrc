@@ -40,8 +40,8 @@ set clipboard=unnamed
 " Enable mouse selection
 set mouse=a
 " Swap : and ;
-nnoremap ; :
-nnoremap : ;
+noremap ; :
+noremap : ;
 " Map , as leader
 let mapleader=","
 " Wild menu
