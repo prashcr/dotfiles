@@ -1,0 +1,15 @@
+" Author: Prashanth Chandra <coolshanth94@gmail.com>
+
+" Site exclusions
+ignorekeys add mail.google.com
+ignorekeys add docs.google.com
+
+" Starts from home row keys
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+
+" Dark colorscheme to match devtools
+colorscheme fxdevtools-dark
+
+" Swap ; and :
+nnoremap ; :
+nnoremap : ;
